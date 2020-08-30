@@ -1,0 +1,7 @@
+--ignore-dir=tmp
+--ignore-dir=build
+--ignore-dir=_build_
+--ignore-file=match:/[.-]min[.]js$/
+--ignore-file=match:/[.]js[.]min$
+--ignore-file=match:[.][0-9a-f]+[.]chunk
+--type-add=txt=.txt
