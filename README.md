@@ -9,3 +9,8 @@ For CentOS 7:
 ```bash
 sudo yum install http://mirror.ghettoforge.org/distributions/gf/el/7/plus/x86_64/tmux-2.4-2.gf.el7.x86_64.rpm vim
 ```
+
+
+```bash
+sudo timedatectl set-timezone Asia/Jerusalem
+```
