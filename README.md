@@ -17,7 +17,7 @@ sudo timedatectl set-timezone Asia/Jerusalem
 
 
 
-Newer 'less' can scroll
+Newer 'less' have mouse support
 ```
 export SYSTEMD_LESS="FRSXM --mouse"
 export LESS="FRSXM --mouse"
