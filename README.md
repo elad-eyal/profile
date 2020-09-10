@@ -22,3 +22,10 @@ Newer 'less' have mouse support
 export SYSTEMD_LESS="FRSXM --mouse"
 export LESS="FRSXM --mouse"
 ```
+
+
+PuTTY colors
+- http://ciembor.github.io/4bit/
+- https://github.com/cowsay/PuTTY-Color-Schemes (https://putty.org.ru/themes/)
+- https://putty.org.ru/themes/index.html
+- https://gist.github.com/gdvalle/4187089
