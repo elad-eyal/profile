@@ -29,3 +29,14 @@ PuTTY colors
 - https://github.com/cowsay/PuTTY-Color-Schemes (https://putty.org.ru/themes/)
 - https://putty.org.ru/themes/index.html
 - https://gist.github.com/gdvalle/4187089
+
+
+.ssh permissions
+```
+chmod 700 ~/.ssh
+chmod 644 ~/.ssh/authorized_keys
+chmod 644 ~/.ssh/known_hosts
+chmod 644 ~/.ssh/config
+chmod 600 ~/.ssh/id_*
+chmod 644 ~/.ssh/id_*.pub
+```
