@@ -2,6 +2,8 @@
 
 curl -L https://codeload.github.com/eladeyal-intel/profile/tar.gz/master | tar xz --strip=2 -C ~
 
+tmux source-file ~/.tmux.conf
+
 ```
 
 
