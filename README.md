@@ -35,6 +35,7 @@ PuTTY colors
 
 .ssh permissions
 ```
+chmod og-w ~
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_*
 chmod 644 ~/.ssh/authorized_keys ~/.ssh/known_hosts ~/.ssh/config ~/.ssh/id_*.pub
