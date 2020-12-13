@@ -9,11 +9,13 @@ set mouse=a
 
 " force 256-color mode
 set t_Co=256
+" Enable powerline symbols for airline-vim
+let g:Powerline_symbols = 'fancy'
 
 set wrap
 set linebreak
 set cursorline
-" highlight CursorLine cterm=NONE  ctermbg=gray
+" highlight CursorLine cterm=NONE ctermbg=gray
 
 
 " Back and Forward mouse buttons
