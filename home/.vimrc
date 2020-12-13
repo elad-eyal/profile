@@ -7,6 +7,9 @@ endif
 
 set mouse=a
 
+" force 256-color mode
+set t_Co=256
+
 set wrap
 set linebreak
 set cursorline
