@@ -6,11 +6,14 @@ if has('gui_running')
 endif
 
 set mouse=a
+" This should enable drag to resize split:
+set ttymouse=xterm2
 
 " force 256-color mode
 set t_Co=256
 " Enable powerline symbols for airline-vim
 let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 set wrap
 set linebreak
