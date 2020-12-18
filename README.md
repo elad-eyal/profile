@@ -22,6 +22,7 @@ sudo yum install http://mirror.ghettoforge.org/distributions/gf/el/7/plus/x86_64
 sudo timedatectl set-timezone Asia/Jerusalem
 ```
 
+Today's font: `SauceCodePro Nerd Font` [link](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip)
 
 
 Newer 'less' have mouse support
