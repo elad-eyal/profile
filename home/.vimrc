@@ -1,5 +1,7 @@
 colorscheme desert
-syntax enable
+if has('syntax_on')
+  syntax enable
+endif
 
 if has('gui_running')
     set guifont=Courier_new:h18
