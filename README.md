@@ -22,7 +22,7 @@ sudo yum install http://mirror.ghettoforge.org/distributions/gf/el/7/plus/x86_64
 sudo timedatectl set-timezone Asia/Jerusalem
 ```
 
-Yesterdays's font: `SauceCodePro Nerd Font` [link](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip)
+Yesterdays's font: `LigaSauceCodePro NF` [link](https://github.com/Bo-Fone/Liga-Sauce-Code-Pro-Nerd-Font/tree/master/OTF/Liga-Sauce-Code-Pro-Nerd-Font-Complete-Windows-Compatible)
 
 Today's font: `FiraCode Nerd Font` [link](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip) weight=Light
 
