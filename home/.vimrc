@@ -1,4 +1,5 @@
-colorscheme desert
+:silent! colorscheme sahara
+
 if has('syntax_on')
   syntax enable
 endif
