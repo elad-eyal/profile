@@ -1,5 +1,10 @@
 :silent! colorscheme sahara
 
+if has('win64')
+  set backupdir=$TEMP//,.
+  set directory=$TEMP//,.
+endif
+
 if has('syntax_on')
   syntax enable
 endif
