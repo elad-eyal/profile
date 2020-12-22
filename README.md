@@ -2,7 +2,7 @@
 
 curl -L https://codeload.github.com/eladeyal-intel/profile/tar.gz/master | tar xz --strip=2 -C ~
 
-wget https://www.vim.org/scripts/download_script.php?src_id=26208 -O - | tar zx --strip=1 -C ~/.vim vim-sahara-0.4.0/colors
+mkdir ~/.vim && curl -L https://www.vim.org/scripts/download_script.php?src_id=26208 | tar zx --strip=1 -C ~/.vim vim-sahara-0.4.0/colors
 git clone --depth=1 https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive && rm -fr ~/.vim/pack/tpope/start/fugitive/.git
 git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline && rm -fr ~/.vim/pack/dist/start/vim-airline/.git
 #git clone --depth=1 https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes && rm -fr ~/.vim/pack/dist/start/vim-airline-themes/.git
