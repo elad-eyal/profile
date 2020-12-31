@@ -1,12 +1,12 @@
 #!bash
 
-curl -L https://codeload.github.com/eladeyal-intel/profile/tar.gz/master | tar xz --strip=2 -C ~
+curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master | tar xz --strip=2 -C ~
 
-mkdir ~/.vim && curl -L https://www.vim.org/scripts/download_script.php?src_id=26208 | tar zx --strip=1 -C ~/.vim vim-sahara-0.4.0/colors
+mkdir -p ~/.vim && curl -sSL https://www.vim.org/scripts/download_script.php?src_id=26208 | tar zx --strip=1 -C ~/.vim vim-sahara-0.4.0/colors
 git clone --depth=1 https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive && rm -fr ~/.vim/pack/tpope/start/fugitive/.git
 git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline && rm -fr ~/.vim/pack/dist/start/vim-airline/.git
 #git clone --depth=1 https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes && rm -fr ~/.vim/pack/dist/start/vim-airline-themes/.git
-curl -L https://www.vim.org/scripts/download_script.php?src_id=14498 | gunzip -f > /tmp/AnsiEsc.vba && vim -c ":so /tmp/AnsiEsc.vba" -c q
+curl -sSL https://www.vim.org/scripts/download_script.php?src_id=14498 | gunzip -f > /tmp/AnsiEsc.vba && vim -c ":so /tmp/AnsiEsc.vba" -c q
 vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
 
 tmux source-file ~/.tmux.conf || true
