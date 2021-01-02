@@ -1,6 +1,6 @@
 ```bash
 
-curl -L https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
+curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
 
 ```
 
