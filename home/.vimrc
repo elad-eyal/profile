@@ -36,5 +36,6 @@ map <X2Mouse> <c-i>
 " vim without any parameters  should open current  directory
 au VimEnter * if eval("@%") == "" | e . | endif
 
-
+" default directory view is tree (shift-ENTER to exapnd)
+let g:netrw_liststyle=3
 
