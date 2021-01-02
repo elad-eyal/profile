@@ -33,6 +33,11 @@ set cursorline
 map <X1Mouse> <c-o>
 map <X2Mouse> <c-i>
 
+" Alt-Left/Right is Forward/Backwards
+map <esc>[1;3D <c-o>
+map <esc>[1;3C <c-i>
+
+
 " vim without any parameters  should open current  directory
 au VimEnter * if eval("@%") == "" | e . | endif
 
