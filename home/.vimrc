@@ -1,3 +1,5 @@
+" This is https://github.com/eladeyal-intel/profile/blob/master/home/.vimrc
+
 :silent! colorscheme sahara
 
 if has('win64')
@@ -14,6 +16,7 @@ if has('gui_running')
 endif
 
 set mouse=a
+
 " This should enable drag to resize split:
 set ttymouse=xterm2
 
@@ -36,7 +39,6 @@ map <X2Mouse> <c-i>
 " Alt-Left/Right is Forward/Backwards
 map <esc>[1;3D <c-o>
 map <esc>[1;3C <c-i>
-
 
 " vim without any parameters  should open current  directory
 au VimEnter * if eval("@%") == "" | e . | endif

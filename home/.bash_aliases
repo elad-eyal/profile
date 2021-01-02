@@ -1,3 +1,5 @@
+# This is https://github.com/eladeyal-intel/profile/blob/master/home/.bash_aliases
+
 alias journalctl='journalctl -a'
 alias less='less -R'
 alias ip='ip --color'

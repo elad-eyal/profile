@@ -1,3 +1,5 @@
+# This is https://github.com/eladeyal-intel/profile/blob/master/home/.ackrc
+
 --ignore-dir=tmp
 --ignore-dir=obj
 --ignore-dir=log
