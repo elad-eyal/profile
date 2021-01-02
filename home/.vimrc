@@ -33,4 +33,8 @@ set cursorline
 map <X1Mouse> <c-o>
 map <X2Mouse> <c-i>
 
+" vim without any parameters  should open current  directory
+au VimEnter * if eval("@%") == "" | e . | endif
+
+
 
