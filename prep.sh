@@ -18,3 +18,4 @@ chmod 644 ~/.ssh/authorized_keys ~/.ssh/known_hosts ~/.ssh/config ~/.ssh/id_*.pu
 
 git config --global log.abbrevCommit 1
 git config --global format.pretty oneline
+git config --global core.editor vim
