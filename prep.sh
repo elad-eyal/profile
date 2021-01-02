@@ -1,6 +1,6 @@
 #!bash
 
-curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master | tar xz --strip=2 -C ~
+curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | tar xz --strip=2 -C ~
 
 mkdir -p ~/.vim && curl -sSL https://www.vim.org/scripts/download_script.php?src_id=26208 | tar zx --strip=1 -C ~/.vim vim-sahara-0.4.0/colors
 git clone --depth=1 https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive && rm -fr ~/.vim/pack/tpope/start/fugitive/.git
@@ -11,10 +11,10 @@ vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "
 
 tmux source-file ~/.tmux.conf || true
 
-chmod og-w ~
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/id_*
-chmod 644 ~/.ssh/authorized_keys ~/.ssh/known_hosts ~/.ssh/config ~/.ssh/id_*.pub
+chmod -f og-w ~
+chmod -f 700 ~/.ssh
+chmod -f 600 ~/.ssh/id_*
+chmod -f 644 ~/.ssh/authorized_keys ~/.ssh/known_hosts ~/.ssh/config ~/.ssh/id_*.pub
 
 git config --global log.abbrevCommit 1
 git config --global format.pretty oneline
