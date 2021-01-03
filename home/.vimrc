@@ -31,6 +31,8 @@ set linebreak
 set cursorline
 " highlight CursorLine cterm=NONE ctermbg=gray
 
+set number
+
 
 " Back and Forward mouse buttons
 map <X1Mouse> <c-o>
