@@ -1,11 +1,13 @@
 # This is https://github.com/eladeyal-intel/profile/blob/master/home/.bash_aliases
 
-alias journalctl='journalctl -a'
 alias less='less -R'
 alias ip='ip --color'
 
+journalctl() {
+    `which --skip-alias --skip-functions journalctl` --no-pager $* | ~/bin/lnav -q
+}
+
 export BLOCKSIZE=h # human format for df
-export SYSTEMD_PAGER=~/bin/lnav\ -q
 
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
