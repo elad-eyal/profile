@@ -5,6 +5,7 @@ alias less='less -R'
 alias ip='ip --color'
 
 export BLOCKSIZE=h # human format for df
+export SYSTEMD_PAGER=~/bin/lnav\ -q
 
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
