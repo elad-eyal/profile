@@ -31,6 +31,7 @@ set linebreak
 set cursorline
 " highlight CursorLine cterm=NONE ctermbg=gray
 
+" Show line numbers
 set number
 
 
@@ -42,9 +43,11 @@ map <X2Mouse> <c-i>
 map <esc>[1;3D <c-o>
 map <esc>[1;3C <c-i>
 
-" vim without any parameters  should open current  directory
-au VimEnter * if eval("@%") == "" | e . | endif
+" vim without any parameters should open current directory browser
+let g:my_is_stdin = 0
+autocmd StdinReadPre * let g:my_is_stdin = 1
+autocmd VimEnter *  if argc() == 0 | if g:my_is_stdin == 0 | e . | endif | endif
 
-" default directory view is tree (shift-ENTER to exapnd)
+" default directory view is tree (shift-ENTER to expand)
 let g:netrw_liststyle=3
 
