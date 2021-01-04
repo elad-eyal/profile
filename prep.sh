@@ -9,8 +9,6 @@ git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/
 curl -sSL https://www.vim.org/scripts/download_script.php?src_id=14498 | gunzip -f > /tmp/AnsiEsc.vba && vim --not-a-term -c ":so /tmp/AnsiEsc.vba" -c q && rm /tmp/AnsiEsc.vba
 vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
 
-tmux source-file ~/.tmux.conf || true
-
 chmod -f og-w ~
 chmod -f 700 ~/.ssh
 chmod -f 600 ~/.ssh/id_*
@@ -21,3 +19,6 @@ git config --global log.abbrevCommit 1
 git config --global format.pretty "format:%Cred%h%Creset %s %C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%al>%Creset"
 git config --global alias.lg "log --graph -10" 
 git config --global core.editor vim
+
+tmux source-file ~/.tmux.conf || true
+source ~/.bash_aliases
