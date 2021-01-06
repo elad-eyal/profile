@@ -4,7 +4,7 @@ alias less='less -R'
 alias ip='ip --color'
 
 journalctl() {
-    `which --skip-alias --skip-functions journalctl` --no-pager $* | ~/bin/lnav -q
+    command journalctl --no-pager $* | ~/bin/lnav -q
 }
 
 export BLOCKSIZE=h # human format for df
