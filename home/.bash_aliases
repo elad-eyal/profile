@@ -3,6 +3,14 @@
 alias less='less -R'
 alias ip='ip --color'
 
+ history() {
+     if [[ "$*" == "" ]]; then
+          command history 10
+      else
+        command history $*
+    fi
+}
+
 journalctl() {
     command journalctl --no-pager $* | $HOME/bin/lnav -q
 }
