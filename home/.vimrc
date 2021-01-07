@@ -1,4 +1,5 @@
 " This is https://github.com/eladeyal-intel/profile/blob/master/home/.vimrc
+" Local configurations go in the file $HOME/.local.vimrc
 
 :silent! colorscheme sahara
 
@@ -15,6 +16,10 @@ if has('gui_running')
     set guifont=Courier_new:h18
 endif
 
+" Highlight search incrementally and globally
+set incsearch hlsearch
+
+" Enable mouse
 set mouse=a
 
 " This should enable drag to resize split:
@@ -51,3 +56,9 @@ autocmd VimEnter *  if argc() == 0 | if g:my_is_stdin == 0 | e . | endif | endif
 " default directory view is tree (shift-ENTER to expand)
 let g:netrw_liststyle=3
 
+" Source a local vimrc {{{
+    let $MYLOCALVIMRC = $HOME . "/.local.vimrc"
+    if filereadable($MYLOCALVIMRC)
+        source $MYLOCALVIMRC
+    endif
+" }}} 
