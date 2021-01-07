@@ -27,3 +27,7 @@ else
     PS1='\A ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     HISTTIMEFORMAT="%T "
 fi
+
+eladprep() {
+    curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
+}
