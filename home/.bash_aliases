@@ -14,6 +14,8 @@ case "$TERM" in
 esac
 if [ "$color_prompt" = yes ]; then
     PS1='\A $(code=${?##0};echo ${code:+\[\e[0;31m\] ${code}\\ })${debian_chroot:+($debian_chroot)}\[\e[32m\]\u@\h\[\e[00m\]\[\e[34;7m\]\w\[\e[27m\]\[\e[00m\] '
+    HISTTIMEFORMAT=`echo -e "\033[0;34m%T \033[0m "`
 else
     PS1='\A ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    HISTTIMEFORMAT="%T "
 fi
