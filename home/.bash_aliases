@@ -3,10 +3,10 @@
 alias less='less -R'
 alias ip='ip --color'
 
- history() {
-     if [[ "$*" == "" ]]; then
-          command history 10
-      else
+history() {
+    if [[ "$*" == "" ]]; then
+        command history 10
+    else
         command history $*
     fi
 }
