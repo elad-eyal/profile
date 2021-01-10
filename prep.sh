@@ -2,8 +2,6 @@
 
 curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | tar xz --strip=2 -C ~
 
-git --version || dnf install git || apt-get install git || sudo dnf install git || sudo apt-get install git 
-
 # replace ~/.lnav/stdin-captures with /tmp to save space & performance 
 mkdir -p ~/.lnav && [[ ! -L ~/.lnav/stdin-captures ]] && rm -fr ~/.lnav/stdin-captures && ln -s /tmp ~/.lnav/stdin-captures
 
