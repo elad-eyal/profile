@@ -10,6 +10,12 @@ For CentOS 7:
 sudo yum install http://galaxy4.net/repo/galaxy4-release-7-current.noarch.rpm && sudo yum install tmux vim
 ```
 
+For CentOS 8:
+```bash
+sudo yum install http://galaxy4.net/repo/galaxy4-release-8-current.noarch.rpm
+sudo yum install tmux
+```
+
 
 ```bash
 sudo timedatectl set-timezone Asia/Jerusalem
