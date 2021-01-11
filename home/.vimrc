@@ -39,6 +39,9 @@ set cursorline
 " Show line numbers
 set number
 
+" Show tabs and trailing whitespaces
+set listchars=tab:▸\ ,trail:·
+set list
 
 " Back and Forward mouse buttons
 map <X1Mouse> <c-o>
