@@ -28,7 +28,7 @@ else
     HISTTIMEFORMAT="%T "
 fi
 
-eladprep() {
+myprep() {
     curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
     source ~/.bash_aliases
 }
