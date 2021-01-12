@@ -5,10 +5,9 @@ curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | ta
 # replace ~/.lnav/stdin-captures with /tmp to save space & performance 
 mkdir -p ~/.lnav && [[ ! -L ~/.lnav/stdin-captures ]] && rm -fr ~/.lnav/stdin-captures && ln -s /tmp ~/.lnav/stdin-captures
 
-
 mkdir -p ~/.vim && curl -sSL https://www.vim.org/scripts/download_script.php?src_id=26208 | tar zx --strip=1 -C ~/.vim vim-sahara-0.4.0/colors
-git clone --depth=1 https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive && rm -fr ~/.vim/pack/tpope/start/fugitive/.git
-git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline && rm -fr ~/.vim/pack/dist/start/vim-airline/.git
+mkdir -p ~/.vim/pack/tpope/start && curl -sSL https://codeload.github.com/tpope/vim-fugitive/tar.gz/master | tar xzf -C ~/.vim/pack/tpope/start
+mkdir -p ~/.vim/pack/dist/start && curl -sSL https://codeload.github.com/vim-airline/vim-airline/tar.gz/master tar | zxf -C  ~/.vim/pack/dist/start
 #git clone --depth=1 https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes && rm -fr ~/.vim/pack/dist/start/vim-airline-themes/.git
 curl -sSL https://www.vim.org/scripts/download_script.php?src_id=14498 | gunzip -f > /tmp/AnsiEsc.vba && vim --not-a-term -c ":so /tmp/AnsiEsc.vba" -c q && rm /tmp/AnsiEsc.vba
 vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
