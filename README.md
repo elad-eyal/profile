@@ -38,6 +38,7 @@ PuTTY colors
 - https://putty.org.ru/themes/index.html
 - https://gist.github.com/gdvalle/4187089
 
+`msgcat --color=test`
 
 .ssh permissions
 ```
