@@ -37,6 +37,7 @@ PuTTY colors
 - https://github.com/cowsay/PuTTY-Color-Schemes (https://putty.org.ru/themes/)
 - https://putty.org.ru/themes/index.html
 - https://gist.github.com/gdvalle/4187089
+- https://github.com/soumyadipdm/Heavenly-putty-color-scheme
 
 `msgcat --color=test`
 
