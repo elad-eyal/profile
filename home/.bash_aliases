@@ -15,6 +15,10 @@ journalctl() {
     command journalctl --no-pager $* | $HOME/bin/lnav -q
 }
 
+abbrev() { 
+    a='[0-9a-fA-F]' b=$a$a c=$b$b; sed "s/$b-$c-$c-$c-$c$c$c//g"; 
+}
+
 export BLOCKSIZE=h # human format for df
 
 case "$TERM" in
