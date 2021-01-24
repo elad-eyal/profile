@@ -12,7 +12,7 @@ sudo yum install http://galaxy4.net/repo/galaxy4-release-7-current.noarch.rpm &&
 
 For CentOS 8:
 ```bash
-sudo dnf install http://galaxy4.net/repo/galaxy4-release-8-current.noarch.rpm &&& sudo dnf install tmux vim 
+sudo dnf install http://galaxy4.net/repo/galaxy4-release-8-current.noarch.rpm && sudo dnf install tmux vim 
 ```
 
 
