@@ -10,6 +10,7 @@ mkdir -p ~/.vim/pack/tpope/start && curl -sSL https://codeload.github.com/tpope/
 mkdir -p ~/.vim/pack/dist/start && curl -sSL https://codeload.github.com/vim-airline/vim-airline/tar.gz/master | tar zx -C  ~/.vim/pack/dist/start
 #git clone --depth=1 https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes && rm -fr ~/.vim/pack/dist/start/vim-airline-themes/.git
 curl -sSL https://www.vim.org/scripts/download_script.php?src_id=14498 | gunzip -f > /tmp/AnsiEsc.vba && vim --not-a-term -c ":so /tmp/AnsiEsc.vba" -c q && rm /tmp/AnsiEsc.vba
+curl -sSL https://github.com/wsdjeg/vim-fetch/releases/download/v3.0.0/vim-fetch-3.0.0.vmb  | sed -e s/^.Users.*chke.vim-fetch.// > /tmp/vim-fetch.vimball && vim --not-a-term -c "source %" -c q -- /tmp/vim-fetch.vimball # See https://github.com/wsdjeg/vim-fetch/issues/31
 vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
 
 git config --global log.abbrevCommit 1 && \
