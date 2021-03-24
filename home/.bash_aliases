@@ -3,11 +3,14 @@
 alias less='less -R'
 alias ip='ip --color'
 
-history() {
-    if [[ "$*" == "" ]]; then
-        command history 10
+cd() {
+    # cd without parameters will also try $WORKSPACE_ROOT
+    # for example, set this in VS Code settings.json
+    # "terminal.integrated.env.linux": { "WORKSPACE_ROOT": "${workspaceRoot}" }
+    if [[ -z "$*" && $(realpath $PWD) == $(realpath ~) ]]; then
+        command cd "$WORKSPACE_ROOT"
     else
-        command history $*
+        command cd $*
     fi
 }
 
