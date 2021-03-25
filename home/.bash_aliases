@@ -1,5 +1,7 @@
 # This is https://github.com/eladeyal-intel/profile/blob/master/home/.bash_aliases
 
+export VISUAL=vim
+
 alias less='less -R'
 alias ip='ip --color'
 
