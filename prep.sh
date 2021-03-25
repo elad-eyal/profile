@@ -13,6 +13,8 @@ curl -sSL https://www.vim.org/scripts/download_script.php?src_id=14498 | gunzip 
 curl -sSL https://github.com/wsdjeg/vim-fetch/releases/download/v3.0.0/vim-fetch-3.0.0.vmb  | sed -e s/^.Users.*chke.vim-fetch.// > /tmp/vim-fetch.vimball && vim --not-a-term -c "source %" -c q -- /tmp/vim-fetch.vimball # See https://github.com/wsdjeg/vim-fetch/issues/31
 vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
 
+curl -sSL http://raw.githubusercontent.com/avivey/profile/master/bin/rebase-table -o $HOME/bin/rebase-table
+
 git config --global log.abbrevCommit 1 && \
 git config --global format.pretty "format:%Cred%h%Creset %s %C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%aN>%Creset" && \
 git config --global alias.lg "log --graph -10"  && \
