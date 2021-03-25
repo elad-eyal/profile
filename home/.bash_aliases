@@ -39,3 +39,13 @@ myprep() {
     curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
     source ~/.bash_aliases
 }
+
+# Inside VS CODE, prefer ack which has clickable links to line.
+
+[[ ! -z "$WORKSPACE_ROOT" ]]&& ack() {
+    if [[ -z "$*" ]]; then
+        command ack
+    else
+        command ack --nogroup $*
+    fi
+}
