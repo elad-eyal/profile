@@ -5,16 +5,18 @@ export VISUAL=vim
 alias less='less -R'
 alias ip='ip --color'
 
-cd() {
-    # cd without parameters will also try $WORKSPACE_ROOT
-    # for example, set this in VS Code settings.json
-    # "terminal.integrated.env.linux": { "WORKSPACE_ROOT": "${workspaceRoot}" }
-    if [[ -z "$*" && $(realpath $PWD) == $(realpath ~) ]]; then
-        command cd "$WORKSPACE_ROOT"
-    else
-        command cd $*
-    fi
-}
+if command realpath / ; then
+    cd() {
+        # cd without parameters will also try $WORKSPACE_ROOT
+        # for example, set this in VS Code settings.json
+        # "terminal.integrated.env.linux": { "WORKSPACE_ROOT": "${workspaceRoot}" }
+        if [[ -z "$*" && $(realpath $PWD) == $(realpath ~) ]]; then
+            command cd "$WORKSPACE_ROOT"
+        else
+            command cd $*
+        fi
+    }
+fi
 
 journalctl() {
     command journalctl --no-pager $* | $HOME/bin/lnav -q
@@ -43,11 +45,12 @@ myprep() {
 }
 
 # Inside VS CODE, prefer ack which has clickable links to line.
-
-[[ ! -z "$WORKSPACE_ROOT" ]]&& ack() {
-    if [[ -z "$*" ]]; then
-        command ack
-    else
-        command ack --nogroup $*
-    fi
-}
+if [ "$TERM_PROGRAM" == "vscode" ]; then
+    ack() {
+        if [[ -z "$*" ]]; then
+            command ack
+        else
+            command ack --nogroup $*
+        fi
+    }
+fi
