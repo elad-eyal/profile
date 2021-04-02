@@ -42,8 +42,6 @@ set number
 " Show tabs and trailing whitespaces
 if has("multi_byte")
     set listchars=tab:▸\ ,trail:·
-else
-    set listchars=tab:>\ ,trail:·
 endif
 set list
 
