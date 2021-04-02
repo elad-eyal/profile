@@ -40,7 +40,11 @@ set cursorline
 set number
 
 " Show tabs and trailing whitespaces
-set listchars=tab:▸\ ,trail:·
+if has("multi_byte")
+    set listchars=tab:▸\ ,trail:·
+else
+    set listchars=tab:>\ ,trail:·
+endif
 set list
 
 " Back and Forward mouse buttons
