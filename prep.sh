@@ -25,7 +25,7 @@ tmux source-file ~/.tmux.conf || true
 
 source ~/.bash_aliases
 
-chmod -f og-w ~
-chmod -f 700 ~/.ssh
-chmod -f 600 ~/.ssh/id_*
-chmod -f 644 ~/.ssh/authorized_keys ~/.ssh/known_hosts ~/.ssh/config ~/.ssh/id_*.pub
+chmod og-w ~   || true
+chmod 700 ~/.ssh   || true
+chmod 600 ~/.ssh/id_*   || true
+chmod 644 ~/.ssh/authorized_keys ~/.ssh/known_hosts ~/.ssh/config ~/.ssh/id_*.pub   || true
