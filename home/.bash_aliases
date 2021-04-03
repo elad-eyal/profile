@@ -5,7 +5,7 @@ export VISUAL=vim
 alias less='less -R'
 alias ip='ip --color'
 
-if command realpath / ; then
+if command -v realpath > /dev/null ; then
     cd() {
         # cd without parameters will also try $WORKSPACE_ROOT
         # for example, set this in VS Code settings.json
