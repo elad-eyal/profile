@@ -22,7 +22,7 @@ if [[ -x $HOME/bin/lnav ]]; then
     journalctl() {
         command journalctl --no-pager $* | $HOME/bin/lnav -q
     }
-elif coomand -v lnav > /dev/null; then
+elif command -v lnav > /dev/null; then
     journalctl() {
         command journalctl --no-pager $* | command lnav -q
     }
