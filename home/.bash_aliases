@@ -18,9 +18,15 @@ if command -v realpath > /dev/null ; then
     }
 fi
 
-journalctl() {
-    command journalctl --no-pager $* | $HOME/bin/lnav -q
-}
+if [[ -x $HOME/bin/lnav ]]; then
+    journalctl() {
+        command journalctl --no-pager $* | $HOME/bin/lnav -q
+    }
+elif coomand -v lnav > /dev/null; then
+    journalctl() {
+        command journalctl --no-pager $* | command lnav -q
+    }
+fi
 
 abbrev() { 
     a='[0-9a-fA-F]' b=$a$a c=$b$b; sed "s/$b-$c-$c-$c-$c$c$c//g"; 
