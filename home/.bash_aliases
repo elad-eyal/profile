@@ -20,11 +20,11 @@ fi
 
 if [[ -x $HOME/bin/lnav ]]; then
     journalctl() {
-        command journalctl --no-pager $* | $HOME/bin/lnav -q
+        command journalctl --no-pager "$@" | $HOME/bin/lnav -q
     }
 elif command -v lnav > /dev/null; then
     journalctl() {
-        command journalctl --no-pager $* | command lnav -q
+        command journalctl --no-pager "$@" | command lnav -q
     }
 fi
 
@@ -56,7 +56,7 @@ if [ "$TERM_PROGRAM" == "vscode" ]; then
         if [[ -z "$*" ]]; then
             command ack
         else
-            command ack --nogroup $*
+            command ack --nogroup "$@"
         fi
     }
 fi
