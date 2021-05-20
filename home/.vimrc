@@ -1,7 +1,9 @@
 " This is https://github.com/eladeyal-intel/profile/blob/master/home/.vimrc
 " Local configurations go in the file $HOME/.local.vimrc
 
-:silent! colorscheme sahara
+if ! ( $TERM_PROGRAM ==? 'vscode' )
+    :silent! colorscheme sahara
+endif
 
 if has('win64')
   set backupdir=$TEMP//,.
