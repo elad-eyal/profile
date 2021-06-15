@@ -45,6 +45,10 @@ else
     HISTTIMEFORMAT="%T "
 fi
 
+dcl() {
+    docker-compose logs --follow | lnav -q -c ':goto -5'
+}
+
 myprep() {
     curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
     source ~/.bash_aliases
