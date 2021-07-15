@@ -46,7 +46,7 @@ else
 fi
 
 dcl() {
-    docker-compose logs --follow | lnav -q -c ':goto -5'
+    docker-compose logs --tail=1000 --follow | lnav -q -c ':goto -5'
 }
 
 myprep() {
