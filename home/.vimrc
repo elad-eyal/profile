@@ -10,7 +10,7 @@ if has('win64')
   set directory=$TEMP//,.
 endif
 
-if has('syntax_on')
+if has('syntax_on') || has('syntax')
   syntax enable
 endif
 
