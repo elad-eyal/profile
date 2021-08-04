@@ -13,7 +13,7 @@ if command -v realpath > /dev/null ; then
         if [[ -z "$*" && $(realpath $PWD) == $(realpath ~) ]]; then
             command cd "$WORKSPACE_ROOT"
         else
-            command cd $*
+            command cd "$*"
         fi
     }
 fi
