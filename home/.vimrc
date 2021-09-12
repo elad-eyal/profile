@@ -65,6 +65,9 @@ autocmd VimEnter *  if argc() == 0 | if g:my_is_stdin == 0 | e . | endif | endif
 " default directory view is tree (shift-ENTER to expand)
 let g:netrw_liststyle=3
 
+" type :Code to open VS Code on current file (if possible)
+command Code call job_start("code -g " . expand("%:p") . ":" . line(".") . ":" . col("."))
+
 " Source a local vimrc {{{
     let $MYLOCALVIMRC = $HOME . "/.local.vimrc"
     if filereadable($MYLOCALVIMRC)
