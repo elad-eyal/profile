@@ -4,6 +4,7 @@ export VISUAL=vim
 
 alias less='less -R'
 alias ip='ip --color'
+[ "$(command -v cf.exe)" ] && alias cf=cf.exe
 
 if command -v realpath > /dev/null ; then
     cd() {
