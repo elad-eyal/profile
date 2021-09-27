@@ -6,6 +6,8 @@ alias less='less -R'
 alias ip='ip --color'
 [ "$(command -v cf.exe)" ] && alias cf=cf.exe
 
+[ ! "$(command -v bat)" ] && [ "$(command -v batcat)" ] && alias bat=batcat # https://github.com/sharkdp/bat
+
 if command -v realpath > /dev/null ; then
     cd() {
         # cd without parameters will also try $WORKSPACE_ROOT
