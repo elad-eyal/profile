@@ -18,6 +18,9 @@ vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "
 
 curl -sSL http://raw.githubusercontent.com/avivey/profile/master/bin/rebase-table -o $HOME/bin/rebase-table && chmod a+x $HOME/bin/rebase-table
 
+
+command -v batcat && batcat cache --build
+
 git config --global log.abbrevCommit 1 && \
 git config --global format.pretty "format:%Cred%h%Creset %s %C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%aN>%Creset" && \
 git config --global alias.lg "log --graph -10"  && \
