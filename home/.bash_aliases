@@ -2,7 +2,9 @@
 
 export VISUAL=vim
 
-alias less='less -R'
+export PAGER=less
+export LESS=-RF
+less --help | grep -q mouse && export LESS="$LESS --mouse"
 alias ip='ip --color'
 [ "$(command -v cf.exe)" ] && alias cf=cf.exe
 
