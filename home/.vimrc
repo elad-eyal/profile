@@ -12,6 +12,7 @@ endif
 
 if has('syntax_on') || has('syntax')
   syntax enable
+  highlight Comment cterm=italic
 endif
 
 if has('gui_running')
@@ -29,6 +30,7 @@ set ttymouse=xterm2
 
 " force 256-color mode
 set t_Co=256
+
 " Enable powerline symbols for airline-vim
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
