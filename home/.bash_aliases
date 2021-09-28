@@ -1,5 +1,8 @@
 # This is https://github.com/eladeyal-intel/profile/blob/master/home/.bash_aliases
 
+# Disable CONTROL-S CONTROL-Q for flow control
+stty -ixon
+
 export VISUAL=vim
 
 export PAGER=less
