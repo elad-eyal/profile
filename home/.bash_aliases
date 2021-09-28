@@ -57,6 +57,10 @@ myprep() {
     source ~/.bash_aliases
 }
 
+__24bitcolor() {
+    curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash
+}
+
 # Inside VS CODE, prefer ack which has clickable links to line.
 if [ "$TERM_PROGRAM" == "vscode" ]; then
     ack() {
