@@ -3,6 +3,8 @@
 # Disable CONTROL-S CONTROL-Q for flow control
 stty -ixon
 
+export MANPATH=$HOME/bin:
+
 export VISUAL=vim
 
 export PAGER=less
