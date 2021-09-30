@@ -2,7 +2,7 @@
 
 curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | tar xz --strip=2 -C ~
 
-[[ -d $HOME/bin/by_arch___/$HOSTTYPE ]] && cp $HOME/bin/by_arch___/$HOSTTYPE/* $HOME/bin/
+[[ -d $HOME/bin/by_arch___/$HOSTTYPE ]] && cp -r $HOME/bin/by_arch___/$HOSTTYPE/* $HOME/bin/
 rm -fr $HOME/bin/by_arch___
 
 # replace ~/.lnav/stdin-captures with /tmp to save space & performance 
