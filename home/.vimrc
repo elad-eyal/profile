@@ -70,6 +70,13 @@ let g:netrw_liststyle=3
 " type :Code to open VS Code on current file (if possible)
 command Code call job_start("code -g " . expand("%:p") . ":" . line(".") . ":" . col("."))
 
+" Enable spellcheck for git commit messages
+autocmd FileType gitcommit setlocal spell
+
+" Show spelling errors with underline too
+hi SpellBad cterm=underline
+hi SpellBad gui=undercurl
+
 " Source a local vimrc {{{
     let $MYLOCALVIMRC = $HOME . "/.local.vimrc"
     if filereadable($MYLOCALVIMRC)
