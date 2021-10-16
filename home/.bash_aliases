@@ -68,6 +68,11 @@ __24bitcolor() {
     curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash
 }
 
+__256bitcolor() {
+    curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash
+
+}
+
 # Inside VS CODE, prefer ack which has clickable links to line.
 if [ "$TERM_PROGRAM" == "vscode" ]; then
     ack() {
