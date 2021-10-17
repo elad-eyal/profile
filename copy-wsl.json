@@ -1,0 +1,10 @@
+{
+    "$schema": "https://lnav.org/schemas/config-v1.schema.json",
+    "ui": {
+        "keymap-defs": {
+            "default": {
+                "x63": {
+                    "command": ":pipe-to clip.exe",
+                    "alt-msg": "${keymap_def_clear}"
+                }
+}}}}
