@@ -1,9 +1,10 @@
-#!bash
+#!/bin/bash
 
 curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | tar xz --strip=2 -C ~
 
-[[ -d $HOME/bin/by_arch___/$HOSTTYPE ]] && cp -r $HOME/bin/by_arch___/$HOSTTYPE/* $HOME/bin/
-rm -fr $HOME/bin/by_arch___
+[[ -d $HOME/by_arch___/$HOSTTYPE ]] && cp -r $HOME/by_arch___/$HOSTTYPE/* $HOME/
+( uname -a | grep -qi wsl ) && cp -r $HOME/by_arch___/WSL/* $HOME/
+rm -fr $HOME/by_arch___
 
 # replace ~/.lnav/stdin-captures with /tmp to save space & performance 
 mkdir -p ~/.lnav && [[ ! -L ~/.lnav/stdin-captures ]] && rm -fr ~/.lnav/stdin-captures && ln -s /tmp ~/.lnav/stdin-captures
