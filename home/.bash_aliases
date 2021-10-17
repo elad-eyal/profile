@@ -56,7 +56,7 @@ else
 fi
 
 dcl() {
-    docker-compose logs --tail=1000 --follow | lnav -q -c ':goto -5'
+    docker-compose logs --timestamp --no-color --tail=1000 --follow | lnav -q -c ':goto -5' -c ':hide-fields timestamp'
 }
 
 myprep() {

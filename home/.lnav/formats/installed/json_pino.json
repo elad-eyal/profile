@@ -1,0 +1,40 @@
+// source: https://github.com/tstack/lnav/issues/634
+
+{
+    "json_pino" : {
+        "title" : "JSON Pino log",
+        "description" : "JSON Pino log",
+        "hide-extra": false,
+        "multiline": false,
+        "json" : true,
+        // "file-pattern" : "\\.json",
+        "level-field" : "level",
+        "level": {
+            "fatal": 60,
+            "error": 50,
+            "warning": 40,
+            "info": 30,
+            "debug": 20,
+            "trace": 10
+        },
+        "value": {
+            "pid": { "kind": "integer", "identifier": true },
+            "hostname": { "kind": "string", "identifier": true },
+            "level": { "kind": "integer", "identifier": true },
+            "time": { "kind": "integer" },
+            "msg": { "kind": "string" },
+            "v": { "kind": "integer" },
+            "responseTime": { "kind": "integer" }
+        },
+        "timestamp-field": "time",
+        "timestamp-divisor": 1000,
+        "convert-to-local-time" : true,
+        "body-field": "msg",
+        "opid-field": "pid",
+        "line-format" : [
+            { "field" : "__timestamp__" },
+            " ",
+            { "field" : "msg", "default-value": "" }
+        ]
+    }
+}

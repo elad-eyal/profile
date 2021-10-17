@@ -1,0 +1,43 @@
+// author: eladeyal
+
+{
+    "$schema": "https://lnav.org/schemas/format-v1.schema.json",
+    "mariadb_log": {
+        "title": "mariadb log",
+        "multiline": true,
+        "regex": {
+            "default": {
+                "pattern": "^(?<timestamp>[-+0-9: ]+)\\s+\\[(?<level>[a-zA-Z]+)\\] (?<body>.*)$"
+            }
+        },
+        "level-field": "level",
+        "level": {
+            "error": "ERROR",
+            "warning": "Warning",
+            "info": "Note"
+        },
+        "value": {
+            "level": {
+                "kind": "string",
+                "identifier": true
+            },
+            "body": {
+                "kind": "string"
+            }
+        },
+        "sample": [
+            {
+                "line": "2021-10-16 07:05:17+00:00 [Note] [Entrypoint]: Stopping temporary server"
+            },
+            {
+                "line": "2021-10-16  7:05:17 0 [Note] mysqld (initiated by: root[root] @ localhost []): Normal shutdown"
+            },
+            {
+                "line": "2021-10-16 07:05:19+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up."
+            },
+            {
+                "line": "2021-10-16  7:05:20 0 [Warning] 'proxies_priv' entry '@% root@8be6efc8284c' ignored in --skip-name-resolve mode."
+            }
+        ]
+    }
+}

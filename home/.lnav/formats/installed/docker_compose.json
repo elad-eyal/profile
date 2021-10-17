@@ -1,0 +1,36 @@
+// author: eladeyal
+
+{
+    "$schema": "https://lnav.org/schemas/format-v1.schema.json",
+    "docker_compose": {
+        "title": "Docker-compose logs",
+        "description": "docker-compose logs output. use 'docker-compose logs --no-color --timestamp'",
+        "url": "https://docs.docker.com/compose/reference/logs/",
+        "regex": {
+            "anyline": {
+                "pattern": "^(.\\[\\d*m)?(?<container>[a-zA-Z_]\\S+)\\s*[|](.\\[0m)?\\s*(?<timestamp>[-.0-9:TZ]+)\\s+(?<body>.*)$"
+            }
+        },
+        "body-field": "body",
+        "module-field": "container",
+        "value": {
+            "body": {
+                "identifier": false,
+                "description": "body"
+            },
+            "container": {
+                "kind": "string",
+                "identifier": true,
+                "description": "The name of the container that generated the message"
+            }
+        },
+        "sample": [
+            {
+                "line": "mariadb_1  | 2021-10-16T07:05:20.019142100Z 2021-10-16  7:05:20 0 [Warning] 'proxies_priv' entry '@% root@8be6efc8284c' ignored in --skip-name-resolve mode."
+            },
+            {
+                "line": "sqlpad_1   | 2021-10-16T07:05:12.381842300Z {\"level\":30,\"time\":\"2021-10-16T07:05:12.381Z\",\"pid\":1,\"hostname\":\"sqlpad\",\"name\":\"sqlpad-app\",\"msg\":\"Loading cache\"}"
+            }
+        ]
+    }
+}
