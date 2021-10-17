@@ -1,0 +1,20 @@
+#/bin/bash
+
+# Copy stdin to Windows Clipboard
+
+if ( command -v clip.exe > /dev/null ); then
+    # Supported in WSL
+    clip.exe
+elif [[ -v TMUX ]]; then
+    # In TMUX, using passthrough escape sequence for ANSI PRINT, Using Kitty
+    echo -ne '\ePtmux;\e\e[5i' > /dev/tty
+    cat $* > /dev/tty
+    echo -ne '\e\e[4i\e\\' > /dev/tty
+else
+    # Using ANSI PRINT, Using Kitty
+    echo -ne '\e''[5i' > /dev/tty
+    cat $* > /dev/tty
+    echo -ne '\e''[4i' > /dev/tty
+fi
+
+

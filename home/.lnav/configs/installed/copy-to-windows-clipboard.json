@@ -4,7 +4,10 @@
         "keymap-defs": {
             "default": {
                 "x63": {
-                    "command": ":pipe-to clip.exe",
+                    "command": ":pipe-to wclip",
                     "alt-msg": "${keymap_def_clear}"
                 }
-}}}}
+            }
+        }
+    }
+}
