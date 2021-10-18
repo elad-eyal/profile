@@ -55,6 +55,8 @@ else
     HISTTIMEFORMAT="%T "
 fi
 
+export LNAV_EXP=mouse # LNAV experimental mouse mode
+
 dcl() {
     docker-compose logs --timestamp --no-color --tail=1000 --follow | lnav -q -c ':goto -5' -c ':hide-fields docker_compose.timestamp'
 }
