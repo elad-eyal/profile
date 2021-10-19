@@ -1,13 +1,32 @@
 #!/bin/bash
 
+# delete and migrate
+rm -f ./home/.lnav/configs/installed/copy-to-windows-clipboard.json
+
+# start
+
 curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | tar xz --strip=2 -C ~
 
 [[ -d $HOME/by_arch___/$HOSTTYPE ]] && cp -r $HOME/by_arch___/$HOSTTYPE/* $HOME/
-( uname -a | grep -qi wsl ) && cp -r $HOME/by_arch___/WSL/* $HOME/
+
+# if ( uname -a | grep -qi wsl ); then
+#    cp -r $HOME/by_arch___/WSL/* $HOME/
+#else
+#    cp -r $HOME/by_arch___/NOT_WSL/* $HOME/
+#fi
+
 rm -fr $HOME/by_arch___
 
 # replace ~/.lnav/stdin-captures with /tmp to save space & performance 
 mkdir -p ~/.lnav && [[ ! -L ~/.lnav/stdin-captures ]] && rm -fr ~/.lnav/stdin-captures && ln -s /tmp ~/.lnav/stdin-captures
+
+
+
+# Override "lnav save-to-clipboard" with mine
+[ "$(command -v lnav)" ] && \
+  ~/bin/lnav -n -N -c ":config /tuning/clipboard/impls/tmux/general/write ~/bin/wclip" && \
+  ~/bin/lnav -n -N -c ":config /tuning/clipboard/impls/tmux/test true"
+
 
 mkdir -p ~/.vim && curl -sSL https://www.vim.org/scripts/download_script.php?src_id=26208 | tar zx --strip=1 -C ~/.vim vim-sahara-0.4.0/colors
 mkdir -p ~/.vim/pack/tpope/start && curl -sSL https://codeload.github.com/tpope/vim-fugitive/tar.gz/master | tar xz -C ~/.vim/pack/tpope/start
