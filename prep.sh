@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # delete and migrate
-rm -f ./home/.lnav/configs/installed/copy-to-windows-clipboard.json
+rm -f $HOME/.lnav/configs/installed/copy-to-windows-clipboard.json
 
 # start
 
