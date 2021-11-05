@@ -61,6 +61,7 @@ map <esc>[1;3C <c-i>
 
 " F4 is save and quit
 nnoremap <F4> ZZ<cr>
+inoremap <F4> <esc>
 
 " vim without any parameters should open current directory browser
 let g:my_is_stdin = 0
