@@ -58,8 +58,9 @@ fi
 export LNAV_EXP=mouse # LNAV experimental mouse mode
 
 dcl() {
-    docker-compose logs --timestamp --no-color --tail=1000 --follow | lnav -q -c ':goto -5' -c ':hide-fields docker_compose.timestamp'
+    docker-compose logs --timestamp --no-color --tail=1000 --follow "$@" | lnav -q -c ':goto -5' -c ':hide-fields docker_compose.timestamp'
 }
+
 complete -C 'makelist() { docker-compose config --services 2> /dev/null  ; }; filter() { makelist | grep "^$2" | sort -u; }; filter' dcl
 
 alias gfa="git fetch --all"
