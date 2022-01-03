@@ -1,0 +1,7 @@
+# this is ~/.inputrc used by bash
+# C-x C-r - re-read-init-file
+set colored-completion-prefix on
+set colored-stats off
+set show-all-if-ambiguous on
+set skip-completed-text on
+
