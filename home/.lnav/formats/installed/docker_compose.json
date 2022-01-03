@@ -8,7 +8,7 @@
         "url": "https://docs.docker.com/compose/reference/logs/",
         "regex": {
             "anyline": {
-                "pattern": "^(.\\[\\d*m)?(?<container>[a-zA-Z_]\\S+)\\s*[|](.\\[0m)?\\s*(?<timestamp>[-.0-9:TZ]+)\\s+(?<body>.*)$"
+                "pattern": "^(.\\[\\d*m)?(?<container>[a-zA-Z_]\\S+)\\s*[|](.\\[0m)?\\s*(?<timestamp>[-.0-9:TZ+]+)\\s+(?<body>.*)$"
             }
         },
         "body-field": "body",
@@ -30,6 +30,9 @@
             },
             {
                 "line": "sqlpad_1   | 2021-10-16T07:05:12.381842300Z {\"level\":30,\"time\":\"2021-10-16T07:05:12.381Z\",\"pid\":1,\"hostname\":\"sqlpad\",\"name\":\"sqlpad-app\",\"msg\":\"Loading cache\"}"
+            },
+            {
+               "line": "plugin-frontend_1        | 2022-01-03T18:40:59.080215493+02:00 [HPM] GET /api/v1//datastores -> https://plugin-backend:8443"
             }
         ]
     }
