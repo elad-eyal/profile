@@ -65,6 +65,19 @@ complete -C 'makelist() { docker-compose config --services 2> /dev/null  ; }; fi
 
 alias gfa="git fetch --all"
 
+retry() {
+    while true
+    do
+        $@
+        local EXIT_CODE=$?
+        if [ $EXIT_CODE -eq 0 ]; then
+            return 0
+        fi
+        echo  $EXIT_CODE    will retry...
+        sleep 1
+   done
+}
+
 myprep() {
     curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
     source ~/.bash_aliases
