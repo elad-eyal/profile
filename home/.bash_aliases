@@ -61,7 +61,14 @@ dcl() {
     docker-compose logs --timestamp --no-color --tail=1000 --follow "$@" | lnav -q -c ':goto -5' -c ':hide-fields docker_compose.timestamp'
 }
 
-complete -C 'makelist() { docker-compose config --services 2> /dev/null  ; }; filter() { makelist | grep "^$2" | sort -u; }; filter' dcl
+complete -C 'makelist() { HASHFILE=/tmp/.$USER.$(cat docker-compose.y*ml docker-compose.override.y*ml $COMPOSE_FILE 2> /dev/null | md5sum | cut -d" " -f1) ;
+                          [[ -s $HASHFILE ]] && cat $HASHFILE && return 0
+                          docker-compose config --services 2> /dev/null | sort -u > $HASHFILE
+                          [[ -s $HASHFILE ]] && cat $HASHFILE && return 0
+                          exit 1
+                        }
+             filter() { makelist | grep "^$2"; };
+             filter' dcl
 
 alias gfa="git fetch --all"
 
