@@ -1,7 +1,23 @@
 # this is ~/.inputrc used by bash
 # C-x C-r - re-read-init-file
+
+# Controls what happens when readline wants to ring the terminal bell.  If set to none, readline never rings the bell.  If set to visible, readline uses a visible bell  if one is available.  If set to audible, readline attempts to ring the terminal's bell.
+set bell-style visible
+
+# If set to On, readline attempts to briefly move the cursor to an opening parenthesis when a closing parenthesis is inserted.
+set blink-matching-paren on
+
 set colored-completion-prefix on
 set colored-stats off
+
+# When  set to On, readline will configure the terminal in a way that will enable it to insert each paste into the editing buffer as a single string of characters, instead of treating each character as if it had been read from the keyboard.  This can prevent pasted characters from being interpreted as editing commands.
+set enable-bracketed-paste on
+
+# If set to On, menu completion displays the common prefix of the list of possible completions (which may be empty) before cycling through the list.
+set menu-complete-display-prefix on
+# This  alters  the  default behavior of the completion functions.  If set to On, words which have more than one possible completion cause the matches to be listed immediately instead of ringing the bell.
 set show-all-if-ambiguous on
+
+# If set to On, this alters the default completion behavior when inserting a single match into the line.  It's only active when performing completion in the  middle  of  a word.  If enabled, readline does not insert characters from the completion that match characters after point in the word being completed, so portions of the word following the cursor are not duplicated
 set skip-completed-text on
 
