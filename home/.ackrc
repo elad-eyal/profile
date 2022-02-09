@@ -5,7 +5,9 @@
 --ignore-dir=log
 --ignore-dir=build
 --ignore-dir=_build_
+--ignore-dir=.cache
 --ignore-dir=.stestr
+--ignore-dir=.npm
 --ignore-file=match:/[.-]min[.]js$/
 --ignore-file=match:/[.]js[.]min$
 --ignore-file=match:[.][0-9a-f]+[.]chunk
