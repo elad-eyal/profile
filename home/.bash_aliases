@@ -108,4 +108,6 @@ if [ "$TERM_PROGRAM" == "vscode" ]; then
             command ack --nogroup "$@"
         fi
     }
+
+    export GIT_SEQUENCE_EDITOR='code --wait'
 fi
