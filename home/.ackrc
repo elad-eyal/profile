@@ -5,6 +5,7 @@
 --ignore-dir=log
 --ignore-dir=build
 --ignore-dir=_build_
+--ignore-dir=.angular
 --ignore-dir=.cache
 --ignore-dir=.stestr
 --ignore-dir=.npm
