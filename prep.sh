@@ -5,9 +5,11 @@ rm -f $HOME/.lnav/configs/installed/copy-to-windows-clipboard.json
 
 # start
 
+ID=$( source  /etc/os-release ; echo $ID )
 curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | tar xz --strip=2 -C ~
 
 [[ -d $HOME/by_arch___/$HOSTTYPE ]] && cp -r $HOME/by_arch___/$HOSTTYPE/* $HOME/
+[[ -d $HOME/by_arch___/$HOSTTYPE,$ID ]] && cp -r $HOME/by_arch___/$HOSTTYPE,$ID)/* $HOME/
 
 # if ( uname -a | grep -qi wsl ); then
 #    cp -r $HOME/by_arch___/WSL/* $HOME/
