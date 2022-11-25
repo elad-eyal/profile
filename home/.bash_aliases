@@ -70,7 +70,7 @@ complete -C 'makelist() { HASHFILE=/tmp/.$USER.$(cat docker-compose.y*ml docker-
              filter() { makelist | grep "^$2"; };
              filter' dcl
 
-alias gfa="git fetch --all"
+type gfa || alias gfa="git fetch --all"
 
 retry() {
     while true
