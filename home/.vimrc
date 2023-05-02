@@ -16,7 +16,7 @@ if has('syntax_on') || has('syntax')
 endif
 
 if has('gui_running')
-    set guifont=Courier_new:h18
+  set guifont=DejaVu\ Sans\ Mono\ 20,Courier_new:h18
 endif
 
 " Highlight search incrementally and globally
