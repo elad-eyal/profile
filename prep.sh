@@ -5,7 +5,7 @@ rm -f $HOME/.lnav/configs/installed/copy-to-windows-clipboard.json
 
 # start
 
-curl -sSL https://codeload.github.com/eladeyal-intel/profile/tar.gz/master? | tar xz --strip=2 -C ~
+curl -sSL https://codeload.github.com/elad-eyal/profile/tar.gz/master? | tar xz --strip=2 -C ~
 
 [[ -d $HOME/by_arch___/$HOSTTYPE ]] && cp -r $HOME/by_arch___/$HOSTTYPE/* $HOME/
 

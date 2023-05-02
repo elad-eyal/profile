@@ -1,4 +1,4 @@
-" This is https://github.com/eladeyal-intel/profile/blob/master/home/.vimrc
+" This is https://github.com/elad-eyal/profile/blob/master/home/.vimrc
 " Local configurations go in the file $HOME/.local.vimrc
 
 if ! ( $TERM_PROGRAM ==? 'vscode' )
