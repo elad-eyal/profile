@@ -1,4 +1,4 @@
-# This is https://github.com/eladeyal-intel/profile/blob/master/home/.bash_aliases
+# This is https://github.com/elad-eyal/profile/blob/master/home/.bash_aliases
 
 # Disable CONTROL-S CONTROL-Q for flow control
 stty -ixon
@@ -86,7 +86,7 @@ retry() {
 }
 
 myprep() {
-    curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
+    curl -sSL https://raw.githubusercontent.com/elad-eyal/profile/master/prep.sh? | bash
     source ~/.bash_aliases
 }
 

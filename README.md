@@ -1,9 +1,9 @@
 ```bash
-curl -sSL https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
+curl -sSL https://raw.githubusercontent.com/elad-eyal/profile/master/prep.sh? | bash
 ```
 or maybe
 ```bash
-wget -O - --secure-protocol=TLSv1_2  https://raw.githubusercontent.com/eladeyal-intel/profile/master/prep.sh? | bash
+wget -O - --secure-protocol=TLSv1_2  https://raw.githubusercontent.com/elad-eyal/profile/master/prep.sh? | bash
 ```
 
 
