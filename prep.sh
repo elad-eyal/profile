@@ -40,7 +40,7 @@ curl -sSL http://raw.githubusercontent.com/avivey/profile/master/bin/rebase-tabl
 curl -sSL http://raw.githubusercontent.com/avivey/profile/master/bin/split-commit-to-files.sh -o $HOME/bin/split-commit-to-files.sh && chmod a+x $HOME/bin/split-commit-to-files.sh
 
 
-command -v batcat && batcat cache --build
+command -v batcat && batcat cache --build || true
 
 git config --global log.abbrevCommit 1 && \
 git config --global format.pretty "format:%Cred%h%Creset %s %C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%aN>%Creset" && \
