@@ -37,6 +37,7 @@ curl -sSL https://github.com/wsdjeg/vim-fetch/releases/download/v3.0.0/vim-fetch
 vim --not-a-term -u NONE -c "helptags ~/.vim/pack/tpope/start/fugitive/doc" -c "helptags ~/.vim/pack/dist/start/vim-airline/doc" -c q
 
 curl -sSL http://raw.githubusercontent.com/avivey/profile/master/bin/rebase-table -o $HOME/bin/rebase-table && chmod a+x $HOME/bin/rebase-table
+curl -sSL http://raw.githubusercontent.com/avivey/profile/master/bin/split-commit-to-files.sh -o $HOME/bin/split-commit-to-files.sh && chmod a+x $HOME/bin/split-commit-to-files.sh
 
 
 command -v batcat && batcat cache --build
