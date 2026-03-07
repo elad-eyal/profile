@@ -68,6 +68,12 @@ let g:my_is_stdin = 0
 autocmd StdinReadPre * let g:my_is_stdin = 1
 autocmd VimEnter *  if argc() == 0 | if g:my_is_stdin == 0 | e . | endif | endif
 
+autocmd StdinReadPre * let g:my_is_stdin = 1
+autocmd VimEnter *  if argc() == 0 | if g:my_is_stdin == 0 | e . | endif | endif
+
+" Send yanked text to system (Windows) clipboard
+autocmd TextYankPost * call system($HOME . '/bin/wclip', @")
+
 " default directory view is tree (shift-ENTER to expand)
 let g:netrw_liststyle=3
 
