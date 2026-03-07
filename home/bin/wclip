@@ -1,20 +1,22 @@
 #/bin/bash
 
-# Copy stdin to Windows Clipboard
+# Copy parameters or stdin to Windows Clipboard
 
-if ( command -v clip.exe > /dev/null ); then
+if [ $# -ne 0 ] && [ -t 0 ]; then
+    printf "%s" "$*" | exec "$0"
+elif ( command -v clip.exe > /dev/null ); then
     # Supported in WSL
     clip.exe
-elif [[ -v TMUX ]]; then
-    # In TMUX, using passthrough escape sequence for ANSI PRINT, Using Kitty
-    echo -ne '\ePtmux;\e\e[5i' > /dev/tty
-    cat $* > /dev/tty
-    echo -ne '\e\e[4i\e\\' > /dev/tty
+elif [[ -n "$TMUX" ]]; then
+    # In TMUX, use tmux passthourgh
+    # "\ePtmux;\e" ... "\e\\" is the TMUX passtrhough code.
+    # The extra \e is needed because \e in the payload need to be doubled
+    printf '\ePtmux;\e\e' > /dev/tty
+    TMUX= "$0" "$@"
+    printf '\e\\' > /dev/tty
 else
-    # Using ANSI PRINT, Using Kitty
-    echo -ne '\e''[5i' > /dev/tty
-    cat $* > /dev/tty
-    echo -ne '\e''[4i' > /dev/tty
+    # Using OSC 52
+    printf "\e]52;c;" > /dev/tty
+    base64 > /dev/tty
+    printf "\a" > /dev/tty
 fi
-
-
