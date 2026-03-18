@@ -43,6 +43,9 @@ set cursorline
 " Show line numbers
 set number
 
+" visual bell instead of audible
+set visualbell
+
 " Show tabs and trailing whitespaces
 if has("multi_byte")
     set listchars=tab:▸\ ,trail:·
